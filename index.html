@@ -5,10 +5,23 @@
   <title>ألمنيوم سفر</title>
   <style>
     body {
-      background-color: white;
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
+      background-image: url('59cd6520-bee7-49d2-a93b-5114dcb33adb.jpg'); /* اسم صورة الخلفية */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
     }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.8); /* خلفية شفافة */
+      text-align: center;
+      padding: 40px 20px;
+      min-height: 100vh; /* تغطية كاملة للصفحة */
+    }
+
     button {
       background-color: rgb(0, 255, 85);
       color: white;
@@ -16,21 +29,67 @@
       border: none;
       cursor: pointer;
       font-size: 16px;
+      margin: 10px;
     }
+
     img {
       margin-top: 20px;
+      width: 200px;
+    }
+
+    h1, p {
+      color: rgb(15, 7, 7); /* لون النص أسود */
+    }
+    /* تنسيق معرض الصور */
+    .gallery-title {
+      margin-top: 50px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-    <img src="test.png.jpg"alt="SFR" width="200"/>
-  <h1>المنيـــوم ســــفر</h1>
-  <p>نقدم افضل خدمات الألمنيوم: أبـواب، شبابيــك، اســقف مســتعارة، كــافة انــواع الـبـلـور</p>
-  <button onclick="window.location.href='https://wa.me/905316218150'">راسلنا عبر واتساب</button>
-  <br><br>
-  <button onclick="window.location.href='tel:+905316218150'">اتصل بنا</button>
-  <p>المنيــوم ســفر مــعكم نـحـو الافضـل</p>
-
+  <div class="overlay">
+    <img src="test.png.jpg" alt="SFR" />
+    <h1>المنيـــوم ســــفر</h1>
+    <p>نقدم افضل خدمات الألمنيوم: أبـواب، شبابيــك، اســقف مســتعارة، كــافة انــواع الـبـلـور</p>
+    <button onclick="window.location.href='https://wa.me/905316218150'">راسلنا عبر واتساب</button>
+    <br><br>
+    <button onclick="window.location.href='tel:+905316218150'">اتصل بنا</button>
+    <p>المنيــوم ســفر مــعكم نـحـو الافضـل</p>
+    <!-- معرض الصور -->
+    <h2 class="gallery-title">معرض أعمالنا</h2>
+    <div class="gallery">
+      <img src="lik.benjur.jpg" alt="اباجور" />
+      <img src="lik.dor.jpg" alt="باب سحاب" />
+      <img src="lik.banyo.jpg" alt="حمام بلور" />
+      <img src= "lik.cambalkon.jpg" alt= "بلور بلكون"/>
+      <img src= "lik.giyotin.jpg" alt="بلور كهربا"/>
+      <img src= "lik.window.jpg" alt="شباك"/>
+      <img src= "lik.dourrr.jpg" alt="باب"/>
+      <img src= "lik.cam.jpg" alt="بلور"/>
+    </div>
+  </div>
 </body>
 </html>
